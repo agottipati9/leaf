@@ -29,10 +29,10 @@ def load_data(stat_metrics_file='stat_metrics.csv', sys_metrics_file='sys_metric
     stat_metrics = pd.read_csv(stat_metrics_file) if stat_metrics_file else None
     sys_metrics = pd.read_csv(sys_metrics_file) if sys_metrics_file else None
 
-    if stat_metrics is not None:
-        stat_metrics.sort_values(by=NUM_ROUND_KEY, inplace=True)
-    if sys_metrics is not None:
-        sys_metrics.sort_values(by=NUM_ROUND_KEY, inplace=True)
+    # if stat_metrics is not None:
+    #     stat_metrics.sort_values(by=NUM_ROUND_KEY, inplace=True)
+    # if sys_metrics is not None:
+    #     sys_metrics.sort_values(by=NUM_ROUND_KEY, inplace=True)
 
     return stat_metrics, sys_metrics
 

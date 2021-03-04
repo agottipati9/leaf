@@ -34,7 +34,7 @@ function run_k() {
 	k="$1"
 	get_k_data "$k"
 	pushd models
-		python main.py -dataset 'sent140' -model 'stacked_lstm' --num-rounds 10 --clients-per-round 2
+		python3 main.py -dataset 'sent140' -model 'stacked_lstm' --num-rounds 10 --clients-per-round 2
 	popd
 	move_data ${OUTPUT_DIR} "k_${k}"
 }

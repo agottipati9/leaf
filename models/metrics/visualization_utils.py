@@ -90,6 +90,7 @@ def plot_accuracy_vs_round_number(stat_metrics, weighted=False, plot_stds=False,
     plt.ylabel('Accuracy')
     plt.xlabel('Round Number')
     _set_plot_properties(kwargs)
+    plt.savefig('AccuracyVSRound.pdf')
     plt.show()
 
 
@@ -164,6 +165,7 @@ def plot_accuracy_vs_round_number_per_client(
                     markersize=18)
 
     _set_plot_properties(kwargs)
+    plt.savefig('AccuracyPerClient.pdf')
     plt.show()
 
 
@@ -190,6 +192,7 @@ def plot_bytes_written_and_read(sys_metrics, rolling_window=10, figsize=(10, 8),
     plt.ylabel('Bytes')
     plt.legend(['Bytes Written', 'Bytes Read'], loc='upper left')
     _set_plot_properties(kwargs)
+    plt.savefig('ServerBytesWrittenRead.pdf')
     plt.show()
 
 
@@ -257,6 +260,7 @@ def plot_client_computations_vs_round_number(
     im = plt.imshow(agg_comp_matrix)
     plt.yticks(range(len(matrix_keys)), matrix_keys)
     plt.colorbar(im, fraction=0.02, pad=0.01)
+    plt.savefig('ComputationVSRound.pdf')
     plt.show()
 
 
